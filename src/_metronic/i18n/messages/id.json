@@ -105,5 +105,7 @@
   "FORM.EXAMPLES.AGE": "Umur",
   "TABLE.VOUCHER.VOUCHER_CODE":"Code",
   "FORM.VOUCHER.VOUCHER_CODE": "kode voucher",
-  "FORM.VOUCHER.DISCOUNT_PERCENT": "diskon persen"
+  "FORM.VOUCHER.DISCOUNT_PERCENT": "diskon persen",
+  "TABLE.VOUCHER.EXPIRY_DATE":"Tanggal kadaluarsa",
+  "TABLE.VOUCHER.DISCOUNT_PERCENT": "Diskon Persen"
 }

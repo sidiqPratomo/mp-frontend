@@ -105,5 +105,7 @@
   "FORM.EXAMPLES.AGE": "Age",
   "TABLE.VOUCHER.VOUCHER_CODE":"Code",
   "FORM.VOUCHER.VOUCHER_CODE": "voucher code",
-  "FORM.VOUCHER.DISCOUNT_PERCENT": "discount percent"
+  "FORM.VOUCHER.DISCOUNT_PERCENT": "discount percent",
+  "TABLE.VOUCHER.EXPIRY_DATE":"Expired date",
+  "TABLE.VOUCHER.DISCOUNT_PERCENT": "Discount percent"
 }

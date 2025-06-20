@@ -19,15 +19,15 @@ function isNotEmpty(obj: unknown) {
 // Example: page=1&items_per_page=10&sort=id&order=desc&search=a&filter_name=a&filter_online=false
 function stringifyRequestQuery(state: QueryState): string {
   const pagination = qs.stringify(state, {
-    filter: ['!skip', '!limit'],
+    filter: ['skip', 'limit'],
     skipNulls: true,
     encode: false,
   });
   const sort = isNotEmpty(state.sort)
-    ? `!sort[${state.sort?.key}]=${state.sort?.order}`
+    ? `sort[${state.sort?.key}]=${state.sort?.order}`
     : '';
   const search = isNotEmpty(state.search)
-    ? qs.stringify(state, { filter: ['!search'], skipNulls: true, encode: false, })
+    ? qs.stringify(state, { filter: ['search'], skipNulls: true, encode: false, })
     : '';
 
   const filter = state.filter

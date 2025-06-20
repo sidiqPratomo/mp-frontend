@@ -8,12 +8,13 @@ import ReadWrapper from '../pages/read/ReadWrapper';
 import { ResourceWrapper } from '../ResourceWrapper';
 import { PageLink, PageTitle } from '../../../_metronic/layout/core';
 import { useIntl } from 'react-intl';
+import { Collection } from '../core/_models';
 
 const IndexRoutes: FC = () => {
   const { formatMessage } = useIntl();
   const breadcrumbs: Array<PageLink> = [
     {
-      title: `Examples`,
+      title: Collection,
       path: ``,
       isSeparator: false,
       isActive: false,
