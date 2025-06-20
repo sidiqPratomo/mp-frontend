@@ -19,6 +19,7 @@ type UploadFileProps = {
     maxFileSize?: string;
   };
   disabled?: boolean
+  readOnly?: boolean
 };
 
 export function UploadFile({
@@ -28,12 +29,13 @@ export function UploadFile({
   initialFile,
   onFileChange,
   rules = {},
-  disabled = false
+  disabled = false,
+  readOnly = true
 }: UploadFileProps) {
   const uploadRef = useRef<HTMLInputElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const [fileData, setFileData] = useState<FileModel>({ ...initFileModel });
-  const { singleUpload } = useFileUpload();
+  const { singleUpload, staticUrl } = useFileUpload();
   const { formatFilenameLabel } = useFormatter();
 
   const handleFile = async (event: ChangeEvent<HTMLInputElement>) => {
@@ -117,6 +119,25 @@ export function UploadFile({
       </InputGroup>
       {rulesInfo()}
       <small className="fs-9 d-block mt-1">File size max 10MB</small>
+
+      <div className="d-flex flex-column gap-2 pt-3">
+        {fileData?.filename &&
+            <div
+              className="d-flex align-items-center justify-content-between"
+            >
+              {formatFilenameLabel(fileData)}
+              {readOnly &&
+                <a
+                  href={staticUrl(fileData)}
+                  target="_blank"
+                  className="btn btn-icon btn-sm"
+                >
+                  <i className="fas fa-download"></i>
+                </a>
+              }
+            </div>
+          }
+      </div>
     </div>
   );
 }
