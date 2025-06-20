@@ -3,11 +3,9 @@ import { Controller, useFormContext } from "react-hook-form";
 import { UpdateModel } from "../../core/_models";
 import {
   DatePicker,
-  MultiUploadWithList,
-  SingleSelect,
+  TranslatedInputNumber,
+  TranslatedInputText,
 } from "../../../../components";
-import { SelectOption } from "../../../../base_models";
-import { useAllEmployees } from "../../query/useAllEmployees";
 
 interface Props {
   collection: string;
@@ -19,107 +17,72 @@ export const EditForm: FC<Props> = ({ collection, readOnly = false }) => {
     formState: { errors },
     control,
   } = useFormContext<UpdateModel>();
-  const { data: dataUser } = useAllEmployees();
 
   return (
     <>
       <Controller
-        name="employee_id"
+        name="voucher_code"
         control={control}
         rules={{
           required: {
             value: true,
-            message: "Name is required",
+            message: "voucher_code is required",
           },
         }}
-        render={({ field: { onChange, value } }) => (
-          <SingleSelect
-            label="user"
-            options={
-              dataUser?.map((user) => ({
-                label: user.user.first_name,
-                value: user.id as unknown as string,
-              })) ?? []
-            }
+        render={({ field: { onChange, value, onBlur } }) => (
+          <TranslatedInputText
+            collection={collection}
+            errorMessage={errors.voucher_code}
+            fieldName="voucher_code"
+            name="voucher_code"
             isRequired={true}
             value={value}
-            changeHandler={(val: SelectOption | null) => {
-              if (val) {
-                onChange(val.value);
-              }
+            onChange={(value: string) => {
+              onChange(value);
             }}
-            errorsMessage={errors.employee_id}
+            placeholder="Enter voucher code"
           />
         )}
       />
-
       <Controller
-        name="files"
+        name="discount_percent"
         control={control}
         rules={{
           required: {
-            value: true,
-            message: "files is required",
+            value: false,
+            message: "discount_percent is required",
           },
         }}
-        render={({ field: { onChange, value } }) => {
-          const parseValue = value ? JSON.parse(value) : [];
-          return (
-            <MultiUploadWithList
-              label="file"
-              bucket="leaves"
-              path="files"
-              initialFiles={parseValue}
-              onFileChange={(files) => {
-                onChange(files);
-              }}
-            />
-          );
-        }}
+        render={({ field: { onChange, value, onBlur } }) => (
+          <TranslatedInputNumber
+            collection={collection}
+            errorMessage={errors.discount_percent}
+            fieldName="discount_percent"
+            name="discount_percent"
+            isRequired={false}
+            value={value}
+            onChange={(event) => {
+              onChange(event.target.value);
+            }}
+            placeholder="enter discount_percent"
+          />
+        )}
       />
-
       <Controller
-        name="leave_date"
+        name="expiry_date"
         control={control}
         rules={{
           required: {
             value: true,
-            message: "leave_date of Birth is required",
+            message: "expiry_date of Birth is required",
           },
         }}
         render={({ field: { onChange, value } }) => (
           <DatePicker
             isRequired
-            label="leave_date"
+            label="tanggal kadaluarsa"
             value={value || ""}
-            errorsMessage={errors.leave_date}
-            options={{
-              altInput: true,
-              altFormat: "j F, Y",
-              dateFormat: "Y-m-d",
-            }}
-            onChange={(date) => {
-              onChange(date);
-            }}
-          />
-        )}
-      />
-
-      <Controller
-        name="return_date"
-        control={control}
-        rules={{
-          required: {
-            value: true,
-            message: "return_date of Birth is required",
-          },
-        }}
-        render={({ field: { onChange, value } }) => (
-          <DatePicker
-            isRequired
-            label="return_date"
-            value={value || ""}
-            errorsMessage={errors.return_date}
+            errorsMessage={errors.expiry_date}
             options={{
               altInput: true,
               altFormat: "j F, Y",

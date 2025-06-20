@@ -18,29 +18,14 @@ const baseHeaderColumns: ReadonlyArray<Column<any>> = [
       <CustomHeaderFieldTranslation
         collection={Collection}
         tableProps={props}
-        name='name'
+        name='voucher_code'
         className='min-w-125px'
       />
     ),
-    id: 'name',
+    id: 'voucher_code',
     Cell: ({ ...props }) => {
       const entry = props.data[props.row.index];
-      return <ColumnString value={entry['name']} />;
-    },
-  },
-  {
-    Header: (props) => (
-      <CustomHeaderFieldTranslation
-        collection={Collection}
-        tableProps={props}
-        name='nik'
-        className='min-w-125px'
-      />
-    ),
-    id: 'nik',
-    Cell: ({ ...props }) => {
-      const entry = props.data[props.row.index];
-      return <ColumnString value={entry['nik']} />;
+      return <ColumnString value={entry['voucher_code']} />;
     },
   },
 ];

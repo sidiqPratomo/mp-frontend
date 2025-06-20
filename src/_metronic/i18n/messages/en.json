@@ -102,5 +102,8 @@
   "FORM.EXAMPLES.NAME": "Name",
   "FORM.EXAMPLES.NIK": "Identity Number",
   "FORM.EXAMPLES.TAXPAYER_NUMBER": "Taxpayer Number",
-  "FORM.EXAMPLES.AGE": "Age"
+  "FORM.EXAMPLES.AGE": "Age",
+  "TABLE.VOUCHER.VOUCHER_CODE":"Code",
+  "FORM.VOUCHER.VOUCHER_CODE": "voucher code",
+  "FORM.VOUCHER.DISCOUNT_PERCENT": "discount percent"
 }

@@ -102,5 +102,8 @@
   "FORM.EXAMPLES.NAME": "Nama",
   "FORM.EXAMPLES.NIK": "Nomor Induk Kependudukan",
   "FORM.EXAMPLES.TAXPAYER_NUMBER": "Nomor NPWP",
-  "FORM.EXAMPLES.AGE": "Umur"
+  "FORM.EXAMPLES.AGE": "Umur",
+  "TABLE.VOUCHER.VOUCHER_CODE":"Code",
+  "FORM.VOUCHER.VOUCHER_CODE": "kode voucher",
+  "FORM.VOUCHER.DISCOUNT_PERCENT": "diskon persen"
 }

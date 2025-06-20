@@ -2,46 +2,36 @@ import { ID } from "../_metronic/helpers";
 
 export interface Voucher {
   id: ID;
-  user_id: string;
-  employee_id: string;
-  files: string;
-  leave_date: string;
-  return_date: string;
-  leave_status: string;
+  voucher_code: string;
+  discount_percent: string;
+  expiry_date: string;
+  created_at: string;
+  updated_at: string;
 }
 
 export interface VoucherCreate {
-  // user_id: string;
-  employee_id: string;
-  files: string;
-  leave_date: string;
-  return_date: string;
-  leave_status: string;
+  voucher_code: string;
+  discount_percent: number;
+  expiry_date: string;
 }
 
 export interface VoucherUpdate {
-  employee_id: string;
-  files: string;
-  leave_date: string;
-  return_date: string;
-  leave_status: string;
+  voucher_code: string;
+  discount_percent: number;
+  expiry_date: string;
 }
 
 export interface VoucherRead {
   id: ID;
-  user_id: string;
-  employee_id: string;
-  files: string;
-  leave_date: string;
-  return_date: string;
-  leave_status: string;
+  voucher_code: string;
+  discount_percent: string;
+  expiry_date: string;
+  created_at: string;
+  updated_at: string;
 }
 
 export const InitialValue: VoucherCreate = {
-  // user_id: "",
-  employee_id: "",
-  files: "",
-  leave_date: "",
-  return_date: "",
-  leave_status: "",
+  voucher_code: "",
+  discount_percent: 0,
+  expiry_date: "",
 };
