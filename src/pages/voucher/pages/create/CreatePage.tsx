@@ -30,6 +30,7 @@ export const CreatePage: FC = () => {
   const onSubmit: SubmitHandler<CreateModel> = async (data: CreateModel) => {
     try {
       setIsLoading(true);
+      // data.discount_percent = parseInt(data.discount_percent)
       await create<CreateModel>(`${Collection}`, data).then((response) => {
         const { data } = response;
         if (data) {

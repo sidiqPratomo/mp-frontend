@@ -70,7 +70,8 @@ export const CreateForm: FC<Props> = ({ collection, readOnly = false }) => {
             isRequired={false}
             value={value}
             onChange={(event) => {
-              onChange(event.target.value);
+              const intValue = parseInt(event.target.value, 10);
+              onChange(isNaN(intValue) ? "" : intValue); // kosong jika tidak valid
             }}
             placeholder="enter discount_percent"
           />
