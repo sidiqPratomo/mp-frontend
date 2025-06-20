@@ -6,6 +6,8 @@ import {
   TranslatedInputNumber,
   TranslatedInputText,
 } from "../../../../components";
+import { UploadFile } from "../../../../components/input/file_uploads/UploadFile";
+import { FileModel } from "../../../../base_models";
 
 interface Props {
   collection: string;
@@ -16,7 +18,13 @@ export const EditForm: FC<Props> = ({ collection, readOnly = false }) => {
   const {
     formState: { errors },
     control,
+    setValue
   } = useFormContext<UpdateModel>();
+
+  const handleFileChange = (file: FileModel) => {
+    const fileString = JSON.stringify(file);
+    setValue("file", fileString);
+  };
 
   return (
     <>
@@ -93,6 +101,28 @@ export const EditForm: FC<Props> = ({ collection, readOnly = false }) => {
             }}
           />
         )}
+      />
+      <Controller
+        name="file"
+        control={control}
+        rules={{
+          required: {
+            value: false,
+            message: "file is required",
+          },
+        }}
+        render={({ field: { value } }) => {
+          const parseValue = value ? JSON.parse(value) : [];
+          return (
+            <UploadFile
+              label="file csv"
+              bucket="vouchers"
+              path={`file-csv`}
+              initialFile={parseValue}
+              onFileChange={handleFileChange}
+            />
+          );
+        }}
       />
     </>
   );

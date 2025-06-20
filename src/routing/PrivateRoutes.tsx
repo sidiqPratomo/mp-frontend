@@ -31,7 +31,7 @@ const PrivateRoutes = () => {
         <Route path="menu-test" element={<MenuTestPage />} />
         {/* Lazy Modules */}
         <Route
-          path="/voucher/*"
+          path="/vouchers/*"
           element={
             <SuspensedView>
               <VoucherPage />

@@ -7,18 +7,21 @@ export interface Voucher {
   expiry_date: string;
   created_at: string;
   updated_at: string;
+  file: string;
 }
 
 export interface VoucherCreate {
   voucher_code: string;
   discount_percent: number;
   expiry_date: string;
+  file: string;
 }
 
 export interface VoucherUpdate {
   voucher_code: string;
   discount_percent: number;
   expiry_date: string;
+  file: string;
 }
 
 export interface VoucherRead {
@@ -28,10 +31,12 @@ export interface VoucherRead {
   expiry_date: string;
   created_at: string;
   updated_at: string;
+  file: string;
 }
 
 export const InitialValue: VoucherCreate = {
   voucher_code: "",
   discount_percent: 0,
   expiry_date: "",
+  file:"",
 };

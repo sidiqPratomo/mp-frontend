@@ -18,6 +18,7 @@ type UploadFileProps = {
   rules?: {
     maxFileSize?: string;
   };
+  disabled?: boolean
 };
 
 export function UploadFile({
@@ -27,6 +28,7 @@ export function UploadFile({
   initialFile,
   onFileChange,
   rules = {},
+  disabled = false
 }: UploadFileProps) {
   const uploadRef = useRef<HTMLInputElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -93,6 +95,7 @@ export function UploadFile({
         hidden={true}
         ref={uploadRef}
         onChange={handleFile}
+        disabled={disabled}
       />
       <InputGroup className='upload'>
         <input

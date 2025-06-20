@@ -23,8 +23,8 @@ const SidebarMenuMain = () => {
       </div>
 
       <SidebarMenuItem
-        to="/voucher"
-        title="Voucher"
+        to="/vouchers"
+        title="Vouchers"
         icon="element-7"
         fontIcon="bi-layers"
       />

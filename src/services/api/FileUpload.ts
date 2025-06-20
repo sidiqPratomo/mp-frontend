@@ -61,7 +61,7 @@ export function ServiceSingleFileUpload(
         params += `&path=${path}`;
       }
 
-      const url: string = `${API_URL}/${API_VERSION}/file/upload?${params}`;
+      const url: string = `${API_URL}/${API_VERSION}/vouchers/upload-csv?${params}`;
 
       axios
         .post(url, payload, {
