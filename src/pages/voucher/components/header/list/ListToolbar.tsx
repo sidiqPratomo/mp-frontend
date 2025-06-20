@@ -1,12 +1,12 @@
 import { useResourceContext } from "../../../../../context/ResourceContext";
 import { Link } from "react-router-dom";
 import { ActionTranslationLabel } from "../../../../../components/label/ActionTranslationLabel";
-// import { Button } from "react-bootstrap";
-// import useDownloadExamples from "../../../hooks/useDownloadExamples";
+import { Button } from "react-bootstrap";
+import useDownloadExamples from "../../../hooks/useDownloadExamples";
 
 const ListToolbar = () => {
   const { collection } = useResourceContext();
-  // const { downloadFile } = useDownloadExamples();
+  const { downloadFile } = useDownloadExamples();
 
   return (
     <div
@@ -18,12 +18,12 @@ const ListToolbar = () => {
           <i className="bi bi-pencil me-2 fs-4"></i>
           <ActionTranslationLabel name="create" />
         </Link>
-        {/* <Button
+        <Button
           className="btn btn-outline btn-outline-secondary ms-3"
           onClick={downloadFile}
         >
           <i className="bi bi-file-earmark-arrow-down fs-4"></i> Export
-        </Button> */}
+        </Button>
       </div>
     </div>
   );

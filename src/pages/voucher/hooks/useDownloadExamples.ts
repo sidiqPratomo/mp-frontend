@@ -7,7 +7,7 @@ const useDownloadExamples = () => {
     try {
       const API_URL = import.meta.env.VITE_APP_API_BASE_URL || "";
       const API_VERSION = import.meta.env.VITE_APP_API_VERSION || "";
-      const URL = `${API_URL}/${API_VERSION}/examples/null/export?report_type=csv`;
+      const URL = `${API_URL}/${API_VERSION}/vouchers/export`;
 
       const response = await axios({
         url: URL,
@@ -23,7 +23,7 @@ const useDownloadExamples = () => {
       link.href = url;
       link.setAttribute(
         "download",
-        `examples_${new Date().toDateString().replace(" ", "_")}.csv`
+        `vouchers_${new Date().toDateString().replace(" ", "_")}.csv`
       );
       document.body.appendChild(link);
       link.click();
