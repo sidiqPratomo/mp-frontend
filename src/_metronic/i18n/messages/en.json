@@ -104,7 +104,7 @@
   "FORM.EXAMPLES.TAXPAYER_NUMBER": "Taxpayer Number",
   "FORM.EXAMPLES.AGE": "Age",
   "TABLE.VOUCHERS.VOUCHER_CODE":"Code",
-  "FORM.VOUCHERS.VOUCHER_CODE": "voucher code",
+  "FORM.VOUCHERS.VOUCHER_CODE": "Unique voucher code",
   "FORM.VOUCHERS.DISCOUNT_PERCENT": "discount percent",
   "TABLE.VOUCHERS.EXPIRY_DATE":"Expired date",
   "TABLE.VOUCHERS.DISCOUNT_PERCENT": "Discount percent"
