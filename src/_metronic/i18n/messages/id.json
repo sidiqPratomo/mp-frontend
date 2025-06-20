@@ -103,9 +103,9 @@
   "FORM.EXAMPLES.NIK": "Nomor Induk Kependudukan",
   "FORM.EXAMPLES.TAXPAYER_NUMBER": "Nomor NPWP",
   "FORM.EXAMPLES.AGE": "Umur",
-  "TABLE.VOUCHER.VOUCHER_CODE":"Code",
-  "FORM.VOUCHER.VOUCHER_CODE": "kode voucher",
-  "FORM.VOUCHER.DISCOUNT_PERCENT": "diskon persen",
-  "TABLE.VOUCHER.EXPIRY_DATE":"Tanggal kadaluarsa",
-  "TABLE.VOUCHER.DISCOUNT_PERCENT": "Diskon Persen"
+  "TABLE.VOUCHERS.VOUCHER_CODE":"Code",
+  "FORM.VOUCHERS.VOUCHER_CODE": "kode voucher",
+  "FORM.VOUCHERS.DISCOUNT_PERCENT": "diskon persen",
+  "TABLE.VOUCHERS.EXPIRY_DATE":"Tanggal kadaluarsa",
+  "TABLE.VOUCHERS.DISCOUNT_PERCENT": "Diskon Persen"
 }

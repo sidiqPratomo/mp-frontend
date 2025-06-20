@@ -103,9 +103,9 @@
   "FORM.EXAMPLES.NIK": "Identity Number",
   "FORM.EXAMPLES.TAXPAYER_NUMBER": "Taxpayer Number",
   "FORM.EXAMPLES.AGE": "Age",
-  "TABLE.VOUCHER.VOUCHER_CODE":"Code",
-  "FORM.VOUCHER.VOUCHER_CODE": "voucher code",
-  "FORM.VOUCHER.DISCOUNT_PERCENT": "discount percent",
-  "TABLE.VOUCHER.EXPIRY_DATE":"Expired date",
-  "TABLE.VOUCHER.DISCOUNT_PERCENT": "Discount percent"
+  "TABLE.VOUCHERS.VOUCHER_CODE":"Code",
+  "FORM.VOUCHERS.VOUCHER_CODE": "voucher code",
+  "FORM.VOUCHERS.DISCOUNT_PERCENT": "discount percent",
+  "TABLE.VOUCHERS.EXPIRY_DATE":"Expired date",
+  "TABLE.VOUCHERS.DISCOUNT_PERCENT": "Discount percent"
 }

@@ -7,7 +7,7 @@ export type ListModel = Voucher;
 
 export const initialVoucherModel: CreateModel = InitialValue;
 
-export const Collection = "voucher";
+export const Collection = "vouchers";
 
 export const initialValueAddModel = { ...initialVoucherModel };
 export const initialValueReadModel = { ...initialVoucherModel };
